@@ -91,6 +91,7 @@ function processar() {
 
     let enfermeiros = [...ListaEnfermeiros]
         .sort((a, b) => ordem[a.nivel] - ordem[b.nivel]);
+        enfermeiros.reverse();   
     let pacientesACamados = ListaPaciente.filter(x => x.acamado == "Acamado")
     let pacientesNCamados = ListaPaciente.filter(x => x.acamado != "Acamado")
     let pacientes = [...pacientesACamados, ...pacientesNCamados]
@@ -146,9 +147,9 @@ function processar() {
 }
 
 const ordem = {
-    Senior: 1,
+    Senior: 3,
     Pleno: 2,
-    Junior: 3
+    Junior: 1
 };
 
 function gerarPDF() {
