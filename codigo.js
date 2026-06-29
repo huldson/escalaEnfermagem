@@ -146,9 +146,9 @@ function processar() {
 }
 
 const ordem = {
-    Senior: 3,
+    Senior: 1,
     Pleno: 2,
-    Junior: 1
+    Junior: 3
 };
 
 function gerarPDF() {
